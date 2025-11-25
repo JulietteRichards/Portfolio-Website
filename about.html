@@ -1,0 +1,125 @@
+<!-- 
+  Created by: Juliette Richards
+  Updated: 11/24/2025
+  File: about.html
+  Purpose: "About Me" page for my portfolio. 
+  This version replaces old class assignment content with my actual professional bio 
+  and adds a skills section + site banner. 
+-->
+
+<!DOCTYPE html> <!-- Using HTML5 standard -->
+<html lang="en"> <!-- Helps accessibility tools + search engines -->
+<head> <!-- Metadata and external resources -->
+  <meta charset="UTF-8"> <!-- UTF-8 so all characters display correctly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive scaling on mobile -->
+  <title>About Me | Juliette Richards</title> <!-- Browser tab title -->
+  <link rel="stylesheet" href="styles.css"> <!-- Shared stylesheet -->
+  <link rel="icon" type="image/png" href="favicon.png"> <!-- Optional favicon -->
+</head>
+
+<body>
+  <!-- ========================= SITE-WIDE BANNER ========================= -->
+  <!-- Full-width banner placed above the navigation. CSS will style this to stretch edge-to-edge. -->
+  <div class="site-banner">
+    <img src="images/Juliette Richards.png" alt="Portfolio banner graphic">
+  </div>
+
+  <!-- ========================= HEADER (logo + navigation) ========================= -->
+  <header>
+    <!-- Logo + site title container -->
+    <div class="brand">
+      <!-- Simple placeholder logo using SVG initials (kept for now; can replace later) -->
+      <svg width="64" height="64" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="lightblue" />
+        <text x="50%" y="55%" text-anchor="middle" fill="black" font-size="30px" font-family="Arial" dy=".3em">JR</text>
+      </svg>
+
+      <span class="site-title">Juliette Richards | Portfolio</span>
+    </div>
+
+    <!-- Main navigation -->
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <!-- Interests removed intentionally (no personal content on this site now) -->
+        <li><a href="game.html">Game</a></li> <!-- Will replace old Gallery link -->
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========================= MAIN CONTENT ========================= -->
+  <section id="intro">
+    <article>
+      <h1>About Me</h1>
+
+      <!-- This section uses my LinkedIn-style About paragraph -->
+      <p>
+        I’m a Computer Science student exploring a bit of everything, including cybersecurity, ethical hacking,
+        web development, and game creation. I’m still figuring out which direction I want to take in tech, and I like it that way.
+        I learn quickly, follow my curiosity, and enjoy diving into new areas just to see what I can build.
+      </p>
+
+      <p>
+        I’ve always loved technology, especially for creating art, but working in banking is where I realized how much computers can
+        really do. It opened up a whole new world of systems, problem solving, and digital tools, and it encouraged me to pursue
+        computer science more seriously.
+      </p>
+
+      <p>
+        My customer service background from Starbucks and U.S. Bank taught me how to communicate clearly, stay patient, and explain
+        things in a way people understand. These skills help me every time I troubleshoot, debug code, or learn something new.
+      </p>
+
+      <p>
+        I have a growing collection of unfinished projects, prototypes, and small experiments. Each one pushed me to learn new tools,
+        new concepts, and new ways to solve problems — and I see all of it as part of the creative process. It has taught me to be
+        adaptable, resourceful, and comfortable learning quickly.
+      </p>
+
+      <p>
+        Right now, I’m focused on building a strong foundation: experimenting, studying, and developing real projects.
+        I’m excited to keep growing in tech — whether that leads me into penetration testing, full-stack development,
+        or an area I haven’t discovered yet.
+      </p>
+
+      <!-- ========================= SKILLS SECTION ========================= -->
+      <!-- Clean beginner-friendly skills list -->
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Python — Entry-Level</li>
+        <li>Java — Beginner</li>
+        <li>HTML & CSS — Beginner</li>
+        <li>Penetration Testing — Entry-Level</li>
+        <li>Version Control (Git / GitHub) — Beginner</li>
+        <li>GDevelop & Game Prototyping — Entry-Level</li>
+        <li>VS Code & IDE Tools — Beginner</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer>
+    <nav>
+      <ul class="nav small">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <!-- Interests removed intentionally -->
+        <li><a href="game.html">Game</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; <span id="year"></span> 2025 Juliette Richards</p>
+    <script>
+      // Updates the copyright year so I don’t have to change it manually
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+</body>
+</html>
+

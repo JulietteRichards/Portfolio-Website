@@ -1,0 +1,86 @@
+<!-- 
+  Created by: Juliette Richards
+  Date: 10/16/2025
+  File: index.html
+  Purpose: Homepage of my portfolio site. Demonstrates required semantic structure.
+  Note: This page links to one shared CSS file (styles.css) for all styling.
+-->
+<!DOCTYPE html> <!-- tells the browser this is an HTML5 document -->
+<html lang="en"> <!-- sets page language to English for browsers and assistive tech -->
+<head> <!-- HEAD holds metadata and resources that are not directly shown on the page -->
+  <meta charset="UTF-8"> <!-- ensures text renders correctly using UTF-8 encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- makes layout scale nicely on phones -->
+  <title>Juliette Richards | Portfolio</title> <!-- text shown in the browser tab -->
+  <link rel="stylesheet" href="styles.css"> <!-- connects this page to the external stylesheet -->
+  <link rel="icon" type="image/png" href="favicon.png"> <!-- small icon in the browser tab (optional) -->
+</head>
+
+<body class="site"> <!-- Week 3: turning on the page grid layout -->
+  <!-- ========================= HEADER (logo + main navigation) ========================= -->
+  <header class="container"> <!-- Week 3: keeping width reasonable -->
+     <!-- HEADER groups site identity (logo/title) and primary navigation -->
+    <div class="brand container"> <!-- Week 3: added container class for consistent layout -->
+ <!-- simple container to place logo and site title side-by-side -->
+      <!-- inline SVG used as a quick personal logo with initials "JR" -->
+      <svg width="64" height="64" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"> <!-- size and coordinate system -->
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="lightblue" /> <!-- colored circle outline -->
+        <text x="50%" y="55%" text-anchor="middle" fill="black" font-size="30px" font-family="Arial" dy=".3em">JR</text> <!-- initials centered -->
+      </svg>
+      <span class="site-title">Juliette Richards | Portfolio</span> <!-- readable site name -->
+    </div>
+
+    <nav> <!-- NAV provides the main menu so users can move between pages -->
+        <!-- Week 3: added wrapper so nav links line up and wrap correctly -->
+  <div class="nav-wrap container">
+      <ul class="nav"> <!-- removed duplicate id to pass validator -->
+        <!-- each LI holds a link to a page on the site; "active" marks the current page -->
+        <li><a class="active" href="index.html">Home</a></li> <!-- current page (Home) -->
+        <li><a href="about.html">About Me</a></li> <!-- goes to About page -->
+        <li><a href="interests.html">Interests</a></li> <!-- goes to Interests page -->
+        <li><a href="gallery.html">Gallery</a></li> <!-- goes to Gallery page -->
+        <li><a href="projects.html">Projects</a></li> <!-- added Projects page link -->
+        <li><a href="contact.html">Contact</a></li> <!-- goes to Contact page -->
+      </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================= MAIN (unique content for this page) ========================= -->
+  <section id="intro"> <!-- SECTION groups a related theme; id used for styling (#intro in CSS) -->
+    <article> <!-- ARTICLE holds a self-contained block of content for this page -->
+      <h1>Hi I'm Juliette!</h1> <!-- main heading for the homepage (one H1 per page) -->
+      <p> <!-- short paragraph describing who I am -->
+        I'm a marathon runner, a banker, and a computer science student who loves to create and build ideas into reality.
+      </p>
+      <p> <!-- second paragraph explaining purpose of the site -->
+        This is my portfolio site where I showcase my projects, learning progress, and interests.
+      </p>
+    </article>
+  </section>
+
+  <!-- ========================= FOOTER (secondary nav + copyright) ========================= -->
+  <footer class="container"> <!-- Week 3: same wrapper for footer -->
+     <!-- FOOTER repeats key links and shows ownership info at the bottom -->
+    <nav> <!-- secondary navigation for convenience; same links as the header -->
+        <!-- Week 3: added wrapper so nav links line up and wrap correctly -->
+  <div class="nav-wrap container">
+      <ul class="nav small"> <!-- removed duplicate id to pass validator -->
+        <li><a class="active" href="index.html">Home</a></li> <!-- active again because we are on Home -->
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="interests.html">Interests</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="projects.html">Projects</a></li> <!-- added Projects page link -->
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      </div>
+    </nav>
+
+    <p>&copy; <span id="year"></span> 2025 Juliette Richards</p> <!-- copyright with dynamic year -->
+    <script>
+      // This small script finds the <span id="year"> and fills it with the current year.
+      // It keeps the year accurate without needing to edit HTML each January.
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
