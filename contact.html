@@ -1,0 +1,170 @@
+<!-- 
+  Created by: Juliette Richards
+  Updated: 11/24/2025
+  File: contact.html
+  Purpose: Contact page with my updated professional links + a working form from my class assignment.
+
+  NOTE FROM ME (mildly annoyed):
+  GitHub Pages refuses to load images if the name isn’t EXACTLY lowercase-with-dashes.
+  So if I upload “Juliette Richards.png” it’s basically like: “never heard of her.”
+  Fixed filenames below so it will finally behave.
+-->
+
+<!DOCTYPE html> <!-- HTML5 declaration -->
+<html lang="en"> <!-- sets main document language -->
+<head> <!-- metadata, page title, and stylesheet links -->
+  <meta charset="UTF-8"> <!-- ensures correct character rendering -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive layout rules -->
+  <title>Contact | Juliette Richards</title> <!-- browser tab title -->
+
+  <!-- FIXED: GitHub Pages is petty about capitalization → styles.css must be lowercase -->
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" type="image/png" href="favicon.png"> <!-- optional favicon -->
+</head>
+
+<body class="site"> <!-- site grid / layout wrapper -->
+
+  <!-- ========================= SITE BANNER ========================= -->
+  <!-- Full-width banner placed above the header. CSS will set sizing. -->
+  <div class="site-banner">
+    <!-- FIXED: renamed to match your updated file → jr.png -->
+    <img src="images/jr.png" alt="Portfolio banner">
+  </div>
+
+  <!-- ========================= HEADER ========================= -->
+  <header class="container"> 
+    <!-- top-of-site identity area -->
+    <div class="brand container">
+      <!-- SVG logo placeholder; kept for consistency across pages -->
+      <svg width="64" height="64" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="lightblue" />
+        <text x="50%" y="55%" text-anchor="middle" fill="black" font-size="30px" font-family="Arial" dy=".3em">JR</text>
+      </svg>
+
+      <span class="site-title">Juliette Richards | Portfolio</span>
+    </div>
+
+    <!-- Navigation (cleaned: removed "Interests", updated "Gallery" → "Game") -->
+    <nav>
+      <div class="nav-wrap container">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="game.html">Game</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================= MAIN CONTENT ========================= -->
+  <section id="intro" class="container"> 
+    <article>
+      <h1>Contact</h1>
+
+      <!-- Short professional intro -->
+      <p>
+        If you’d like to connect about my projects, collaborations, or technical work, feel free to reach out using the details below.
+      </p>
+
+      <!-- Updated contact info -->
+      <p>Email: <a href="mailto:julietterchrds@gmail.com">julietterchrds@gmail.com</a></p>
+      <p>Location: Cheney, WA</p>
+      <p>GitHub: <a href="https://github.com/JulietteRichards" target="_blank">github.com/JulietteRichards</a></p>
+
+      <!-- ========================= CONTACT FORM ========================= -->
+      <!-- 
+        This form comes from my class assignment. 
+        I kept the required structure, IDs, and labels exactly the same so the provided script.js continues to work.
+      -->
+      <h2>Send me a message</h2>
+
+      <form id="webForm" action="#" class="contact-form">
+
+        <!-- Your Info -->
+        <fieldset>
+          <legend>Your Information</legend>
+
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" placeholder="Cheney, WA">
+        </fieldset>
+
+        <!-- Topic + preferences -->
+        <fieldset>
+          <legend>What’s this about?</legend>
+
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="project">Project inquiry</option>
+            <option value="collab">Collaboration</option>
+            <option value="speaking">Speaking / interview</option>
+            <option value="other">Other</option>
+          </select>
+
+          <p><strong>Preferred contact method:</strong></p>
+          <label><input type="radio" name="contactMethod" value="email" required> Email</label>
+          <label><input type="radio" name="contactMethod" value="phone"> Phone</label>
+
+          <p><strong>I’m interested in (check all that apply):</strong></p>
+          <label><input type="checkbox" name="interests" value="web"> Web dev/design</label>
+          <label><input type="checkbox" name="interests" value="security"> Cyber / tech topics</label>
+          <label><input type="checkbox" name="interests" value="game"> Game development</label>
+          <label><input type="checkbox" name="interests" value="other"> Other</label>
+        </fieldset>
+
+        <!-- Message field -->
+        <fieldset>
+          <legend>Message</legend>
+
+          <label for="message">How can I help?</label>
+          <textarea id="message" name="message" rows="6" placeholder="Share details here..." required></textarea>
+
+          <label>
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+            Subscribe for occasional updates
+          </label>
+        </fieldset>
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+      </form>
+
+      <!-- Script output area (required for assignment) -->
+      <div id="output"></div>
+    </article>
+  </section>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="container">
+    <nav>
+      <div class="nav-wrap container">
+        <ul class="nav small">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="game.html">Game</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <p>&copy; <span id="year"></span> 2025 Juliette Richards</p>
+    <script>
+      // sets the footer year dynamically so I never need to update it manually
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+  <!-- Assignment script, placed at bottom for performance -->
+  <script src="script.js"></script>
+</body>
+</html>

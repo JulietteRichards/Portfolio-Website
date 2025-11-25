@@ -1,0 +1,96 @@
+<!-- 
+  Created by: Juliette Richards
+  Date: 10/16/2025
+  Updated: 11/25/2025
+  File: index.html
+  Purpose: Homepage of my portfolio site. Now includes site banner + updated nav.
+  Note: GitHub is super picky about filenames, so all references use lowercase.
+-->
+
+<!DOCTYPE html> <!-- tells the browser this is an HTML5 document -->
+<html lang="en"> <!-- sets page language to English for browsers and assistive tech -->
+
+<head> <!-- HEAD holds metadata and resources that are not directly shown on the page -->
+  <meta charset="UTF-8"> <!-- ensures text renders correctly using UTF-8 encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive scaling for phones -->
+  <title>Juliette Richards | Portfolio</title> <!-- text shown in browser tab -->
+
+  <!-- FIXED: GitHub requires exact case match -->
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body class="site">
+
+  <!-- ========================= SITE BANNER ========================= -->
+  <!-- Added (finally) — this matches the other pages so everything looks unified -->
+  <div class="site-banner">
+    <img src="images/jr.png" alt="Portfolio banner graphic">
+  </div>
+
+  <!-- ========================= HEADER (logo + main navigation) ========================= -->
+  <header class="container">
+    <div class="brand container">
+      <!-- inline SVG logo w/ initials -->
+      <svg width="64" height="64" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="lightblue" />
+        <text x="50%" y="55%" text-anchor="middle" fill="black" font-size="30px" font-family="Arial" dy=".3em">JR</text>
+      </svg>
+
+      <span class="site-title">Juliette Richards | Portfolio</span>
+    </div>
+
+    <!-- Updated navigation: removed Interests + Gallery, added Game -->
+    <nav>
+      <div class="nav-wrap container">
+        <ul class="nav">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="game.html">Game</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================= MAIN CONTENT ========================= -->
+  <section id="intro">
+    <article>
+      <h1>Hi I'm Juliette!</h1>
+
+      <p>
+        I'm a marathon runner, a banker, and a computer science student who loves to create and build ideas into reality.
+      </p>
+
+      <p>
+        This is my portfolio site where I showcase my projects, learning progress, and interests.
+      </p>
+    </article>
+  </section>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="container">
+    <nav>
+      <div class="nav-wrap container">
+        <ul class="nav small">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="game.html">Game</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <p>&copy; <span id="year"></span> 2025 Juliette Richards</p>
+
+    <script>
+      // Fills in the footer year automatically (future me doesn't have to update it)
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+</body>
+</html>

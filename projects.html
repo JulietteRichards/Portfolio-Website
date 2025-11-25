@@ -1,0 +1,157 @@
+<!-- 
+  Created by: Juliette Richards
+  Updated: 11/24/2025
+  File: projects.html (formerly interests.html)
+  Purpose: Central Projects page showing my coding work, prototypes,
+           and in-progress development projects.
+
+  NOTE: GitHub Pages is extremely dramatic about file names.
+  If the capitalization doesn't match EXACTLY, your images won't load.
+  This version fixes the banner + game preview paths to match the
+  new lowercase/dashed image names I uploaded.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Juliette Richards</title>
+
+  <!-- FIXED: styles.css MUST be lowercase for GitHub -->
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+  <!-- ========================= SITE BANNER ========================= -->
+  <div class="site-banner">
+    <!-- FIXED: renamed to match your new file → images/jr.png -->
+    <img src="images/jr.png" alt="Portfolio banner graphic">
+  </div>
+
+  <!-- ========================= HEADER ========================= -->
+  <header>
+    <div class="brand">
+      <!-- SVG logo -->
+      <svg width="64" height="64" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="lightblue" />
+        <text x="50%" y="55%" text-anchor="middle" fill="black" font-size="30px" font-family="Arial" dy=".3em">JR</text>
+      </svg>
+
+      <span class="site-title">Juliette Richards | Portfolio</span>
+    </div>
+
+    <!-- Updated navigation -->
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="game.html">Game</a></li>
+        <li><a class="active" href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========================= MAIN CONTENT ========================= -->
+  <section id="intro">
+    <article>
+      <h1>Projects</h1>
+
+      <p>
+        A collection of the projects I've built or experimented with while studying Computer Science. 
+        These include beginner coding assignments, personal prototypes, and current work-in-progress ideas.
+      </p>
+
+      <!-- ========================= PROJECT 1: PYTHON CD CALCULATOR ========================= -->
+      <h2>Python CD Calculator</h2>
+      <p>
+        One of my earliest Python programs. This tool calculates the future value of a Certificate of Deposit 
+        based on the deposit amount, interest rate, and term length. It helped me understand variables, math operations, 
+        and user input at the beginning of my coding journey.
+      </p>
+
+      <div class="project-embed">
+        <!-- This embed loads directly from OnlineGDB -->
+        <script src="//onlinegdb.com/embed/js/MGGZKw-CI?theme=undefined"></script>
+      </div>
+
+      <p>
+        <a href="https://onlinegdb.com/MGGZKw-CI" target="_blank">
+          Open this project in a new tab →
+        </a>
+      </p>
+
+
+      <!-- ========================= PROJECT 2: RUN DIARY (JAVA) ========================= -->
+      <h2>Run Diary – Java Program</h2>
+      <p>
+        A Java console program where users can log running sessions, view summaries, and track overall mileage. 
+        This helped me practice classes, methods, user input, loops, and storing simple data.
+      </p>
+
+      <div class="project-embed">
+        <!-- Same here — direct embed via OnlineGDB -->
+        <script src="//onlinegdb.com/embed/js/csPiXHNhSt?theme=undefined"></script>
+      </div>
+
+      <p>
+        <a href="https://onlinegdb.com/csPiXHNhSt" target="_blank">
+          Open this project in a new tab →
+        </a>
+      </p>
+
+
+      <!-- ========================= PROJECT 3: VAULT SWIPE ========================= -->
+      <h2>Vault Swipe – Puzzle Game Concept</h2>
+      <p>
+        A puzzle game concept I'm actively developing. Matching tiles earns coins, which players can use to build 
+        and customize their own vault. This project blends technical learning with creative design, and I'm experimenting 
+        using both Unity and GDevelop.
+      </p>
+
+      <!-- FIXED: updated filename to GitHub-safe lowercase/dash format -->
+      <img src="images/vault-swipe-3.png" alt="Vault Swipe gameplay preview">
+
+      <p>
+        <a href="game.html">View full game concept →</a>
+      </p>
+
+
+      <!-- ========================= IN-PROGRESS SECTION ========================= -->
+      <h2>In Progress</h2>
+      <ul>
+        <li>Building a simple web-based prototype for Vault Swipe.</li>
+        <li>Updating the Run Diary Java program with additional features.</li>
+        <li>Practicing basic penetration testing concepts in safe labs.</li>
+        <li>Exploring more intermediate front-end development topics.</li>
+      </ul>
+
+    </article>
+  </section>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer>
+    <nav>
+      <ul class="nav small">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="game.html">Game</a></li>
+        <li><a class="active" href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; <span id="year"></span> 2025 Juliette Richards</p>
+    <script>
+      // auto-updates footer year so future-me never has to touch this again
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+</body>
+</html>

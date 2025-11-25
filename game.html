@@ -1,0 +1,186 @@
+<!-- 
+  Created by: Juliette Richards
+  Updated: 11/24/2025
+  File: game.html
+  Purpose: Dedicated project page for my puzzle game "Vault Swipe."
+  This replaces the old gallery page and now showcases concept art,
+  early UI mockups, and a breakdown of the game idea.
+
+  NOTE FROM FUTURE JULIETTE (a little frustrated):
+  GitHub Pages is SO PICKY about filenames. 
+  It refuses to load anything unless the file name AND the path 
+  match EXACTLY — including lowercase, dashes, no spaces, nothing fun.
+-->
+
+<!DOCTYPE html> <!-- HTML5 document -->
+<html lang="en"> <!-- main language -->
+<head>
+  <meta charset="UTF-8"> <!-- ensures proper character display -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- mobile-friendly scaling -->
+  <title>Vault Swipe – Game Concept | Juliette Richards</title> <!-- browser tab title -->
+
+  <!-- FIXED: changed Styles.css → styles.css because GitHub Pages will spite you if the letter case is wrong -->
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" type="image/png" href="favicon.png"> <!-- optional tab icon (works once the file exists) -->
+</head>
+
+<body>
+
+  <!-- ========================= SITE BANNER ========================= -->
+  <!-- Full-width banner placed above the header for branding -->
+  <div class="site-banner">
+    <!-- FIXED: renamed "Juliette Richards.png" → "jr.png" to match your new image file -->
+    <img src="images/jr.png" alt="Portfolio banner graphic">
+  </div>
+
+  <!-- ========================= HEADER ========================= -->
+  <header>
+    <div class="brand">
+      <!-- Simple placeholder logo (can replace later) -->
+      <svg width="64" height="64" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="lightblue" />
+        <text x="50%" y="55%" text-anchor="middle" fill="black" font-size="30px" font-family="Arial" dy=".3em">JR</text>
+      </svg>
+
+      <span class="site-title">Juliette Richards | Portfolio</span>
+    </div>
+
+    <!-- Updated navigation: Interests removed, Gallery replaced with Game -->
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="game.html">Game</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========================= MAIN CONTENT ========================= -->
+  <section id="intro">
+    <article>
+      <h1>Vault Swipe – Game Concept</h1>
+
+      <p>
+        <strong>Vault Swipe</strong> is an early-stage puzzle game concept where 
+        matching pieces earns coins that players can use to build, decorate, and upgrade 
+        their own customizable money vault. This page includes my Canva concept art, 
+        UI mockups, and a breakdown of the initial gameplay ideas.
+      </p>
+
+      <!-- ========================= TITLE IMAGE ========================= -->
+      <h2>Game Title Concept</h2>
+      <!-- First image: the simple "Vault Swipe" text graphic -->
+
+      <!-- FIXED: renamed "Vault Swipe.png" → "vault-swipe.png" -->
+      <img src="images/vault-swipe.png" alt="Vault Swipe title screen concept">
+
+      <p class="caption">
+        Early title logo concept. This is a placeholder to establish the general name and direction of the game.
+      </p>
+
+      <!-- ========================= START SCREEN MOCKUP ========================= -->
+      <h2>Start Screen</h2>
+      <!-- Second image: start button only -->
+
+      <!-- FIXED: renamed "Vault Swipe-2.png" → "vault-swipe-2.png" -->
+      <img src="images/vault-swipe-2.png" alt="Start screen mockup for Vault Swipe">
+
+      <p class="caption">
+        Initial start screen mockup featuring the “Play” button. This screen will eventually include 
+        additional navigation options such as Settings, Vault Preview, and Daily Rewards.
+      </p>
+
+      <!-- ========================= GAMEPLAY CONCEPT ========================= -->
+      <h2>Gameplay Board Concept</h2>
+
+      <!-- FIXED: renamed "Vault Swipe-3.png" → "vault-swipe-3.png" -->
+      <img src="images/vault-swipe-3.png" alt="Gameplay concept: match board with themed pieces">
+
+      <p class="caption">
+        Early gameplay concept: themed pieces include coins, cash stacks, rubies, 
+        money bags, and dollar bills. Matching pieces earns coins which are saved 
+        to the player's vault. The goal is to collect as much currency as possible 
+        while clearing tiles and achieving objectives.
+      </p>
+
+      <!-- ========================= CUSTOM VAULT SYSTEM ========================= -->
+      <h2>Vault Customization</h2>
+
+      <!-- FIXED: renamed "Vault Swipe-4.png" → "vault-swipe-4.png" -->
+      <img src="images/vault-swipe-4.png" alt="Vault building concept art">
+
+      <p class="caption">
+        Example vault concept. Players earn coins through gameplay and use them to build, 
+        upgrade, and decorate their personal vault structure. The vault evolves visually 
+        as the player progresses.
+      </p>
+
+      <!-- ========================= GAMEPLAY LOOP ========================= -->
+      <h2>Gameplay Loop</h2>
+      <ul>
+        <li>Match themed pieces on a puzzle grid.</li>
+        <li>Clear combos to earn coins and rare items.</li>
+        <li>Spend currency to upgrade and customize your vault.</li>
+        <li>Unlock new decorations, themes, and vault rooms as you progress.</li>
+      </ul>
+
+      <!-- ========================= TOOLS USED ========================= -->
+      <h2>Tools & Development</h2>
+      <p>
+        Vault Swipe is currently in the concept and prototyping stage.  
+        I’ve used the following tools so far:
+      </p>
+      <ul>
+        <li>GDevelop – early 2D prototyping</li>
+        <li>Unity – initial experiments with tile movement</li>
+        <li>Canva – concept art & UI mockups</li>
+        <li>Google Drive / Local assets – organizing early ideas</li>
+      </ul>
+
+      <!-- ========================= FUTURE GOALS ========================= -->
+      <h2>Future Plans</h2>
+      <ul>
+        <li>Design full gameplay screen with working match logic.</li>
+        <li>Add animations for tile movement and clearing combos.</li>
+        <li>Build the first version of the vault-building system.</li>
+        <li>Create polished UI elements for menus and upgrade screens.</li>
+        <li>Develop a playable web or mobile prototype.</li>
+      </ul>
+
+      <!-- ========================= PLAY BUTTON (future embed) ========================= -->
+      <h2>Playable Demo</h2>
+      <p>
+        A playable demo will appear here once the prototype is ready.  
+        (Unity WebGL, GDevelop export, or itch.io embed.)
+      </p>
+      <button disabled style="padding:0.75rem 1.5rem; border-radius:6px; background:#bbb; border:none;">
+        Demo Coming Soon
+      </button>
+
+    </article>
+  </section>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer>
+    <nav>
+      <ul class="nav small">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="game.html">Game</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; <span id="year"></span> 2025 Juliette Richards</p>
+    <script>
+      /* Auto-updates the year so I don’t have to update this for the rest of my life */
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+</body>
+</html>
